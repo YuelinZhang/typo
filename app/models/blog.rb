@@ -13,7 +13,7 @@ class Blog < ActiveRecord::Base
   attr_accessor :custom_permalink
 
   validate(:on => :create) { |blog|
-    unless Blog.count.zero?
+   unless Blog.count.zero?
       blog.errors.add(:base, "There can only be one...")
     end
   }
@@ -248,6 +248,6 @@ class Blog < ActiveRecord::Base
     end
     @split_base_url
   end
-
+ 
 end
 
